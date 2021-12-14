@@ -67,6 +67,16 @@ function update() {
   document.getElementById("posY").innerHTML = bot.posY;
   document.getElementById("view").innerHTML = bot.view;
   context.fillRect(bot.posX, bot.posY, gridSize, gridSize);
+  //   drawView();
+}
+
+function drawView() {
+  ctx.beginPath();
+  ctx.moveTo(bot.posX + gridSize / 2, bot.posY + gridSize / 2);
+  ctx.lineTo(bot.posX + gridSize / 2, bot.posY);
+  // context.fillStyle = "#000";
+  ctx.stroke();
+  // context.fillStyle = cursorColor;
 }
 
 update();
