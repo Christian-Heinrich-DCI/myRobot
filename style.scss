@@ -5,11 +5,13 @@ $height: 500px;
 
 $borderRadius: 0.5rem;
 $buttonColor: #00b8d4;
+$grau: #78909c;
 
 * {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   font-family: "Space Mono", monospace;
 }
 
@@ -34,6 +36,14 @@ h1 {
 // Nur für Programmierung
 #dev {
   margin-top: 1rem;
+  color: #333;
+  #posX,
+  #posY {
+    color: $grau;
+  }
+  #view {
+    color: #009688;
+  }
 }
 nav {
   margin-top: 1rem;
@@ -54,7 +64,7 @@ nav {
       transform: translateY(-4px);
     }
     &#btn-reset {
-      background-color: #78909c;
+      background-color: $grau;
     }
   }
 }
@@ -75,11 +85,12 @@ nav {
   #overlay {
     width: $width;
     height: $height;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
   }
   #canvas {
     background-color: hsl(0, 0%, 10%);
-    border-bottom-left-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
+    border: 5px solid #006064;
   }
   // Grafischer Effekt, der Röhrenmonitor nachbildet
   #overlay {
