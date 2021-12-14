@@ -3,6 +3,12 @@ const width = 900;
 const height = 500;
 const gridSize = 50;
 
+const cursorColor = "#1DE9B6";
+
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+context.fillStyle = cursorColor;
+
 // Startwerte
 const startX = 0;
 const startY = 0;
@@ -20,16 +26,16 @@ const bot = {
 function move() {
   if (bot.view == "north" && bot.posY >= gridSize) {
     bot.posY -= gridSize;
-  } else if (bot.view == "east" && bot.posX <= width - gridSize) {
+  } else if (bot.view == "east" && bot.posX <= width - 2 * gridSize) {
     bot.posX += gridSize;
-  } else if (bot.view == "south" && bot.posY <= height - gridSize) {
+  } else if (bot.view == "south" && bot.posY <= height - 2 * gridSize) {
     bot.posY += gridSize;
   } else if (bot.view == "west" && bot.posX >= gridSize) {
     bot.posX -= gridSize;
   } else {
     console.log("ERROR... illegal move!");
   }
-  update(); // Nur für Programmierung
+  update();
 }
 
 // rotates robot 90° clockwise
@@ -45,19 +51,22 @@ function rotate() {
   } else {
     console.log("ERROR... illegal rotation!");
   }
-  update(); // Nur für Programmierung
+  update();
 }
 
 function reset() {
   bot.posX = startX;
   bot.posY = startY;
   bot.view = startView;
-  update(); // Nur für Programmierung
+  update();
 }
 
-// Nur für Programmierung
 function update() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
   document.getElementById("posX").innerHTML = bot.posX;
   document.getElementById("posY").innerHTML = bot.posY;
   document.getElementById("view").innerHTML = bot.view;
+  context.fillRect(bot.posX, bot.posY, gridSize, gridSize);
 }
+
+update();
