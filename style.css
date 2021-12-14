@@ -39,18 +39,29 @@ nav {
 }
 
 nav button {
-  background-color: #304ffe;
+  background-color: #00b8d4;
   color: #e8eaf6;
   font-size: 1.25rem;
   font-weight: bold;
-  padding: 0.25rem 1rem;
+  padding: 0.2rem 1.5rem 0.3rem 1.5rem;
   border-radius: 0.5rem;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 nav button:hover {
-  background-color: #4965fe;
+  background-color: #00ceee;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  -webkit-box-shadow: 0 4px 0 #00a2bb;
+          box-shadow: 0 4px 0 #00a2bb;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+nav button#btn-reset {
+  background-color: #78909c;
 }
 
 #terminal {
@@ -76,6 +87,8 @@ nav button:hover {
 
 #terminal #canvas {
   background-color: #1a1a1a;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 #terminal #overlay {
