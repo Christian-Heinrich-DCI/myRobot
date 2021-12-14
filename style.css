@@ -46,8 +46,8 @@ nav button {
   padding: 0.2rem 1.5rem 0.3rem 1.5rem;
   border-radius: 0.5rem;
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 nav button:hover {
@@ -76,7 +76,6 @@ nav button#btn-reset {
   padding: 0.16rem 0 0.16rem 0.67rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  letter-spacing: 1px;
 }
 
 #terminal #canvas,
