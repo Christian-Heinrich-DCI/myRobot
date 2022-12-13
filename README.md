@@ -2,7 +2,7 @@
 
 ## Live-Version
 
-https://christian-heinrich-dci.github.io/myRobot/
+https://christian-heinrich-dci.github.io/myRobot/ (deactivated)
 
 ## Jans Version
 
